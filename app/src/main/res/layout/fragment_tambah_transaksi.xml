@@ -1,0 +1,83 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.emenace.refin13.TambahTransaksi">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg_blue_grey"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.github.florent37.materialtextfield.MaterialTextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mtf_animationDuration="1000">
+
+            <EditText
+                android:id="@+id/input_amount"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:drawableBottom="#FFFFFF"
+                android:hint="Amount"
+                android:inputType="number"
+                android:padding="10dp" />
+        </com.github.florent37.materialtextfield.MaterialTextField>
+
+        <com.github.florent37.materialtextfield.MaterialTextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mtf_animationDuration="1000">
+
+            <EditText
+                android:id="@+id/input_keterangan"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:drawableBottom="@drawable/bg_pink"
+                android:hint="Keterangan"
+                android:inputType="textMultiLine"
+                android:padding="10dp" />
+        </com.github.florent37.materialtextfield.MaterialTextField>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/type_transaksi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"></Spinner>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnSimpanTransaksi"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_pink"
+                android:onClick="simpan"
+                android:text="Simpan"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_blue_grey"
+                android:onClick="back"
+                android:text="Kembali"
+                android:textColor="#FFFFFF" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+</FrameLayout>
